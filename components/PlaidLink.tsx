@@ -18,6 +18,7 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const [token, setToken] = useState("")
 
   useEffect(() => {
+    // create Plaid connection
     const getLinkToken = async () => {
       const data = await createLinkToken(user)
 
@@ -44,15 +45,15 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
     onSuccess,
   }
 
+  // if connection succeed, ready=true
   const { open, ready } = usePlaidLink(config)
-  console.log(open, ready)
 
   return (
     <>
       {variant === "primary" ? (
         <Button
           onClick={() => open()}
-          // disabled={!ready}
+          disabled={!ready}
           className="plaidlink-primary"
         >
           Connect bank
