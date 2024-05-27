@@ -171,6 +171,7 @@ export const createBankAccount = async ({
       ID.unique(),
       { userId, bankId, accountId, accessToken, fundingSourceUrl, sharableId }
     )
+
     return parseStringify(bankAccount)
   } catch (error) {
     console.error(error)
@@ -249,7 +250,7 @@ export const getBanks = async ({ userId }: getBanksProps) => {
       BANK_COLLECTION_ID!,
       [Query.equal("userId", [userId])]
     )
-
+    
     return parseStringify(banks.documents)
   } catch (error) {
     console.log(error)

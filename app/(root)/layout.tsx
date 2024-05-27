@@ -10,7 +10,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   if(!loggedIn) redirect('/sign-in')
 
   return (
-    <main className="flex- h-screen w-full font-inter">
+    <main className="flex h-screen w-full font-inter">
       <Sidebar user={loggedIn} />
 
       <div className="flex size-full flex-col">

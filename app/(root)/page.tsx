@@ -10,7 +10,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   // User Info
   const loggedIn = await getLoggedInUser()
   // All linked accounts
-  const { accounts } = await getAccounts({ userId: loggedIn.$id })
+  const accounts = await getAccounts({ userId: loggedIn.$id })
 
   if (!accounts) return
 
@@ -19,7 +19,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   const appwriteItemId = (id as string) || accountsData[0].appwriteItemId
 
   const account = await getAccount({ appwriteItemId })
-
+  
   return (
     <section className="home">
       <div className="home-content">
@@ -37,10 +37,10 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
             totalCurrentBalance={accounts?.totalCurrentBalance}
           />
         </header>
-        
-        <RecentTransactions 
+
+        <RecentTransactions
           accounts={accountsData}
-          transactions={account.transactions}
+          transactions={account?.transactions}
           appwriteItemId={appwriteItemId}
           page={currentPage}
         />
