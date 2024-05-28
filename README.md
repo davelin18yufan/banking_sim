@@ -18,10 +18,12 @@ Built with Next.js, Horizon is a financial SaaS platform that connects to multip
 ## Getting Started
 
   1. <h4>Create an account:</h4> Sign up for a free Horizon account and complete the registration process.
-  2. <h4>Connect your bank accounts:</h4> Once registered, you can connect your bank accounts by following the on-screen instructions. <p style='color:orange'>When connecting your bank accounts, Bank account information can be ignored, meaning it can be entered arbitrarily</p>
+  2. <h4>Connect your bank accounts:</h4> Once registered, you can connect your bank accounts by following the on-screen instructions. 
+  `When connecting your bank accounts, Bank account information can be ignored, meaning it can be entered arbitrarily`
+  
   3. <h4>Start managing your finances:</h4> Explore Horizon's various features and start taking control of your finances.
 
-## <h3 style='color:orange'>Sandbox Mode</h3>
+<h3 style='color:orange'>Sandbox Mode</h3>
 
 For your convenience, Horizon offers a sandbox mode that allows you to explore the platform's features without connecting your real bank accounts. This is a great way to get familiar with Horizon and its capabilities before diving in with your own financial data.
 
