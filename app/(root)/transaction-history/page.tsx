@@ -14,14 +14,14 @@ const TransactionHistory = async ({
   const accounts = await getAccounts({
     userId: loggedIn.$id,
   })
-
+  
   if (!accounts) return
-
+  
   const accountsData = accounts?.data
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId
 
   const account = await getAccount({ appwriteItemId })
-
+  
   const rowsPerPage = 10
   const totalPages = Math.ceil(account?.transactions.length / rowsPerPage)
 

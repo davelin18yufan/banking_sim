@@ -8,7 +8,7 @@ const MyBanks = async () => {
   const accounts = await getAccounts({
     userId: loggedIn.$id,
   })
-
+  
   return (
     <section className="flex">
       <div className="my-banks">
@@ -23,7 +23,7 @@ const MyBanks = async () => {
             {accounts &&
               accounts.data.map((a: Account) => (
                 <BankCard
-                  key={accounts.id}
+                  key={a.id}
                   account={a}
                   userName={loggedIn?.firstName}
                 />
